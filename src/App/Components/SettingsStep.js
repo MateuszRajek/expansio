@@ -14,7 +14,7 @@ function App({onClick, user, counter, setCounter, inputValue, setInputValue}) {
   return (
     <Body>
       <Circle widthValue={'100px'} heightValue={'100px'}>
-        {user && <Picture src={picture.large}/>}
+        <Picture src={picture.large}/>
       </Circle>
       <Spacer />
       <Text>{`${name.first} ${name.last}`}</Text>
