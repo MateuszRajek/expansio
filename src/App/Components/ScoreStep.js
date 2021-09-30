@@ -1,9 +1,9 @@
 import { Body, Picture } from './StyledComnponents'
 
-function App({randomPerson}) {
+function App({inputValue}) {
   return (
     <Body>
-      {/* <Picture src={}/> */}
+      
     </Body>
   );
 }

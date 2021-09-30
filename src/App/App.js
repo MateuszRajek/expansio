@@ -6,6 +6,8 @@ import ScoreStep from '../App/Components/ScoreStep'
 const App = () => {
   const [stepNumber, setStepNumber] = useState(1)
   const [randomUser, setRandomUser] = useState()
+  const [counter, setCounter] = useState(0)
+  const [inputValue, setInputValue] = useState('')
 
   const getRandomUser = () => {
     fetch('https://randomuser.me/api/', {
@@ -19,12 +21,24 @@ const App = () => {
   useEffect(() => {
     getRandomUser()
   }, [])
-console.log(randomUser)
+
+  const stepChange = () => {
+    
+  }
 
   return (
       <Container>
-        {stepNumber === 1 && <SettingsStep user={randomUser} />}
-        {stepNumber === 2 && <ScoreStep />}
+        {randomUser && stepNumber === 1 && 
+        <SettingsStep 
+          user={randomUser} 
+          counter={counter}
+          setCounter={setCounter}
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+        />}
+        {stepNumber === 2 && 
+        <ScoreStep 
+        />}
       </Container>
   );
 }
