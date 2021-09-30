@@ -6,12 +6,13 @@ export const Container = styled.div`
     align-items: center;
     height: 100vh;
     width: 100vw;
+    font-family: sans-serif;
 `
 
 export const Body = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 300px;
     height: 500px;
@@ -28,7 +29,7 @@ export const Circle = styled.div`
     align-items: center;
     width: ${({widthValue}) => widthValue};
     height: ${({heightValue}) => heightValue};
-    border: 2px solid #4338f2;
+    border: 3px solid #4338f2;
     border-radius: 50%;
     overflow: hidden;
 `
@@ -39,7 +40,6 @@ export const Picture = styled.img`
 `
 
 export const Text = styled.p`
-    font-family: sans-serif;
     font-size: 22px;
 `
 
@@ -47,7 +47,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 45%;
+    width: 50%;
 `
 
 export const Button = styled.button`
@@ -63,7 +63,6 @@ export const Button = styled.button`
 `
 
 export const Number = styled.p`
-    font-family: sans-serif;
     font-size: ${({fontValue}) => fontValue}
 `
 
@@ -77,4 +76,8 @@ export const Input = styled.input`
             color: transparent
         }
     }
+`
+
+export const Spacer = styled.span`
+    margin: 20px 0
 `

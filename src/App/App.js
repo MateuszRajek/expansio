@@ -23,13 +23,14 @@ const App = () => {
   }, [])
 
   const stepChange = () => {
-    
+    stepNumber === 1 ? setStepNumber(2) : setStepNumber(1)
   }
 
   return (
       <Container>
         {randomUser && stepNumber === 1 && 
         <SettingsStep 
+          onClick={stepChange}
           user={randomUser} 
           counter={counter}
           setCounter={setCounter}
@@ -38,6 +39,9 @@ const App = () => {
         />}
         {stepNumber === 2 && 
         <ScoreStep 
+          onClick={stepChange}
+          counter={counter}
+          text={inputValue}
         />}
       </Container>
   );
