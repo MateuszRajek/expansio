@@ -60,6 +60,7 @@ export const Button = styled.button`
     border-radius: 50%;
     background-color: #038a32;
     color: #FFFFFF;
+    font-size: 12px;
 `
 
 export const Number = styled.p`
